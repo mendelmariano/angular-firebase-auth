@@ -8,10 +8,15 @@ import { MaterialModule } from './material.module';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { MainModule } from './main/main.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthModule } from './auth/auth.module';
+import { ProductsModule } from './products/products.module';
+import { UploadModule } from './upload/upload.module';
+
+
 
 @NgModule({
   declarations: [
@@ -26,8 +31,11 @@ import { AuthModule } from './auth/auth.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     MainModule,
     AppRoutingModule,
+    ProductsModule,
+    UploadModule
     
   ],
   providers: [],

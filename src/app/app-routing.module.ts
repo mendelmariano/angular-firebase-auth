@@ -11,10 +11,25 @@ const routes: Routes = [
   },
 
   {
+    path: 'products',
+    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule),
+    
+  },
+
+  {
+    path: 'uploads',
+    loadChildren: () => import('./upload/upload.module').then(m => m.UploadModule),
+    
+  },
+
+  {
     path: 'main',
     loadChildren: () => import('./main/main.module').then(m => m.MainModule),
     canActivate: [AuthGuardService]
   },
+
+  
+
   {
     path: '**',
     component: NotFoundComponent
